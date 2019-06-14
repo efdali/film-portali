@@ -1,0 +1,177 @@
+/*
+font-family: 'Indie Flower', cursive;
+font-family: 'Hind Guntur', sans-serif;
+font-family: 'Source Sans Pro', sans-serif;
+
+
+*/
+
+
+
+body{
+    box-sizing: border-box;
+    background-color: #2C2C2C;
+    color:white;
+}
+
+a{
+    color:white;
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    width: 100%;
+    height: 90px;
+    background-color: #484848;
+    margin: auto;
+}
+
+.header{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    margin: auto;
+}
+.brand{
+    align-self: center;
+    flex-basis: 20%;
+    text-align: center;
+}
+.brand>a{
+    font-size: 40px;
+    font-family: 'Indie Flower', cursive; 
+}
+.navbar-right{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 80%;
+    font-family: 'Hind Guntur', sans-serif;
+}
+
+
+.navbar-top {
+    display: flex;
+    flex-direction: row;
+    background-color: #2C2C2C;
+    align-items: center;
+  }
+  .navbar-social {
+    flex-direction: row;
+    display: flex;
+    margin-left: auto;
+    margin-right: 20px;
+  }
+  .contact {
+    padding: 10px;
+  }
+  .twitter {
+    padding: 10px;
+  }
+  input {
+    border: none;
+    background-color: #191919;
+    color: white;
+    width: 90%;
+  }
+  .input-group {
+    background-color: #191919;
+    line-height: 40px;
+    width: 246px;
+    padding: 0 5px;
+  }
+  .navbar-bottom {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+  }
+  .sign {
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+  }
+  .signup {
+    padding: 10px;
+  }
+  .signin {
+    padding: 10px;
+  }
+  .navbar-categories {
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    flex-basis: 50%;
+    font-size:20px;
+  }
+  .navbar-link:hover{
+    color:#21E1FF;
+  }
+  .kind-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    justify-content: space-around;
+    height: 135px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    background-color: #484848;
+  }
+  .kind-link {
+    width: 118px;
+    height: 30px;
+    text-align: center;
+    background-color: #5A5A5A;
+    line-height: 30px;
+    border-radius: 84px;
+    margin: 0 15px;
+  }
+
+  .kind-container > .active{
+      background-color: #21E1FF;
+  }
+ 
+
+
+  .container{
+    width: 90%;
+    height: auto;
+    margin: 50px auto;
+  }
+  .container h1{
+    border-left: 5px solid #21E1FF;
+    padding-left: 10px;
+    margin-left: 50px;
+  }
+  .slider-container{
+    width: 99%;
+    height: 250px;
+    position: relative;
+  }
+
+  .slider-control{
+    font-size:45px;
+    position: absolute;
+    bottom: 0;
+    top:0;
+    display: flex;
+    align-items: center;
+  }
+  .left{
+    left: 0;
+  }
+  .right{
+    right: 0;
+  }
+  .film-box{
+    float: left;
+    margin-left: 15px;
+    width: 175px;
+    height: 250px;
+  }
+
+  .film-poster{
+    width: 170px;
+    height: 250px;
+  }
