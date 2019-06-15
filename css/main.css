@@ -38,7 +38,7 @@ header{
     flex-basis: 20%;
     text-align: center;
 }
-.brand>a{
+.site-logo{
     font-size: 40px;
     font-family: 'Indie Flower', cursive; 
 }
@@ -74,11 +74,23 @@ header{
     color: white;
     width: 90%;
   }
-  .input-group {
+  .search-input {
     background-color: #191919;
     line-height: 40px;
     width: 246px;
     padding: 0 5px;
+    position: relative;
+  }
+  .search-film-list{
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+    background-color: inherit;
+    left: 0;
+  }
+  .search-film-list>a{
+    display: flex;
+    align-items: center;
   }
   .navbar-bottom {
     display: flex;
@@ -134,44 +146,105 @@ header{
  
 
 
+
   .container{
-    width: 90%;
+    width: 80%;
     height: auto;
     margin: 50px auto;
   }
   .container h1{
     border-left: 5px solid #21E1FF;
     padding-left: 10px;
-    margin-left: 50px;
-  }
-  .slider-container{
-    width: 99%;
-    height: 250px;
-    position: relative;
+    font-family: 'Source Sans Pro',sans-serif;
+    font-size: 25px;
   }
 
-  .slider-control{
-    font-size:45px;
+  /* Slider */
+  .owl-nav > button{
     position: absolute;
-    bottom: 0;
-    top:0;
+    font-size: 45px !important;
+    color:#21E1FF !important;
+    top:38%;
+  }
+  .owl-prev{
+    left:-20px;
+  }
+  .owl-next{
+    right:-20px;
+  }
+
+  .sort-panel{
+    font-family: 'Source Sans Pro',sans-serif;
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+  .sort-panel > .active{
+    color:#21E1FF;
+  }
+  .film-wrapper{
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: flex-start;
+    width: 100%;
+    flex-wrap: wrap;
   }
-  .left{
-    left: 0;
-  }
-  .right{
-    right: 0;
-  }
+
   .film-box{
     float: left;
-    margin-left: 15px;
     width: 175px;
     height: 250px;
+    margin-bottom: 20px;
   }
 
   .film-poster{
     width: 170px;
     height: 250px;
   }
+  .btn{
+    border:none;
+    color:white;
+    padding: 5px 20px;
+    cursor: pointer;
+  }
+
+  .btn-more{
+    background-color: #484848;
+    margin-left: 44%;
+    margin-top:5px;
+  }
+
+
+  footer {
+    width: 100%;
+    height: 60px;
+    margin: auto;
+    text-align: center;
+    background-color: #484848;
+    line-height: 60px;
+}
+
+/* Modal */
+.modal{
+
+  font-family: 'Source Sans Pro',sans-serif;
+  font-size: 20px;
+  color: white;
+  padding: 36px !important;
+  background-color: #2C2C2C !important;
+  text-align: center !important;
+}
+.input-item{
+  width: 90%;
+  height: 30px;
+}
+
+.btn-sign{
+  background-color: #0080FF;
+  margin-top: 15px;
+}
+
+.forgot-password{
+  font-size: 15px;
+  font-family: 'Hind Guntur', sans-serif;
+}
