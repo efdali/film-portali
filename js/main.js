@@ -36,3 +36,7 @@ $("#search").focus(function(){
 $("#search").blur(function(){
     $(".search-film-list").css("display","none");
 });
+
+$("#watch").click(function(){
+    $("#source").toggle();
+});
