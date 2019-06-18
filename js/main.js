@@ -40,3 +40,13 @@ $("#search").blur(function(){
 $("#watch").click(function(){
     $("#source").toggle();
 });
+
+$("#open-header").click(function(){
+    $(".header-container").toggle();
+    $(this).removeClass();
+    if($(".header-container").is(":visible")){
+       $(this).addClass("fas fa-times");
+    }else{
+        $(this).addClass("fas fa-bars");
+    }
+});

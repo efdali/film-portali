@@ -210,7 +210,7 @@ header{
 
   .btn-more{
     background-color: #484848;
-    margin-left: 44%;
+    margin-left: calc(50% + -62px);
     margin-top:5px;
   }
 
@@ -240,7 +240,7 @@ header{
 }
 
 .btn-sign{
-  background-color: #0080FF;
+  background-color: #2C2C2C;
   margin-top: 15px;
 }
 
@@ -253,7 +253,7 @@ header{
 /* Film - Detay */
 .wrapper{
   display: flex;
-  height: 250px;
+  /*height: 250px;*/
   flex-wrap: wrap;
 }
 .film-info{
@@ -325,10 +325,101 @@ ul.film-button {
   width: 50px;
 }
 
+.film-summary{
+  height: 135px;
+  overflow: hidden;
+  display: block;
+}
+.mobile-summary{
+  display: none;
+}
 #video-modal{
   height: calc(100vh - 20px);
   padding: 0px !important;
 }
 .modal{
   max-width: 100% !important;
+}
+/* Mobil */
+@media screen and (max-width:425px){
+
+  header{
+    display: none;
+  }
+  .mobile-header{
+    background-color: #484848;
+    display: flex;
+    padding: 15px 10px;
+  }
+  .mobile-search{
+    margin-left:auto;
+    margin-right: 15px;
+  }
+  .site-logo{
+    font-size:20px;
+  }
+  .film-box{
+    width: 100%;
+    
+  }
+  .film-poster{
+    width: 100%;
+  }
+
+  .film-info{
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    order:2;
+  }
+  .wrapper > .film-button{
+    margin:auto;
+    margin-top: 15px;
+    order:1;
+  }
+  .film-summary{
+    height: auto;
+  }
+  .info-wrapper{
+    flex-direction: column;
+  }
+  .crew-poster{
+    margin-top:15px;
+    margin-right: 0;
+  }
+
+  /* Header */
+
+
+  .header-container{
+    width: 100%;
+    height: 100vh;
+    background-color: #484848;
+    padding-top: 10px;
+    display: none;
+  }
+  .sign-group{
+    text-align: center;
+    margin:10px 0px;
+  }
+
+  .mobile-kind-container{
+    height: auto;
+    margin:15px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    justify-content: space-around;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    background-color: #484848;
+  }
+
+  .kind-link{
+    margin:5px 15px;
+  }
+  .navbar-categories{
+    flex-direction: column;
+  }
+
 }
