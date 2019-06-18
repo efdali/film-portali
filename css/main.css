@@ -26,6 +26,9 @@ header{
     background-color: #484848;
     margin: auto;
 }
+.mobile-header{
+  display: none;
+}
 
 .header{
     width: 100%;
