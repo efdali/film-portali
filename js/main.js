@@ -3,8 +3,19 @@ window.addEventListener('DOMContentLoaded', (event) => {
 });
 
 $("#kinds").click(function(){
-    $(".kind-container").toggle();
-});          
+    $("#kind-container").toggle();
+}); 
+$("#mobile-kinds").click(function(){
+    var i=$("#mobile-kinds i");
+    $("#mobile-kind-container").toggle();
+    changeClass(i,"fas fa-caret-up","fas fa-caret-down",$("#mobile-kind-container").is(":visible"))
+}); 
+/* Profile */
+$(".show-profile-list").click(function(){
+    $(".profile-list").toggle();
+    changeClass($(this),"fas fa-caret-up","fas fa-caret-down",$(".profile-list").is(":visible"));
+});
+
 $('.owl-carousel').owlCarousel({
     loop:true,
     margin:15,
@@ -30,23 +41,43 @@ $('.owl-carousel').owlCarousel({
     }
 });
 
-$("#search").focus(function(){
+$(".search").focus(function(){
     $(".search-film-list").css("display","block");
 });
-$("#search").blur(function(){
+$(".search").blur(function(){
     $(".search-film-list").css("display","none");
 });
 
+/* Mobile Search */
+$(".mobile-search-icon").click(function(){
+    $("#mobile-search-container").show();
+    $(this).hide();
+    $("#mobile-search-input").focus();
+});
+
+$("#mobile-search-input").blur(function(){
+    $("#mobile-search-container").hide();
+    $(".mobile-search-icon").show();
+});
+/* Mobile Search */
 $("#watch").click(function(){
     $("#source").toggle();
 });
 
 $("#open-header").click(function(){
     $(".header-container").toggle();
-    $(this).removeClass();
-    if($(".header-container").is(":visible")){
-       $(this).addClass("fas fa-times");
-    }else{
-        $(this).addClass("fas fa-bars");
-    }
+    changeClass($(this),"fas fa-times","fas fa-bars",$(".header-container").is(":visible"));
 });
+
+
+
+
+function changeClass(view,c1,c2,status){
+    view.removeClass();
+    if(status){
+        view.addClass(c1);
+    }else{
+        view.addClass(c2);
+    }
+
+}

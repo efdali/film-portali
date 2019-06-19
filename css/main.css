@@ -26,7 +26,7 @@ header{
     background-color: #484848;
     margin: auto;
 }
-.mobile-header{
+.mobile{
   display: none;
 }
 
@@ -112,6 +112,28 @@ header{
   }
   .signin {
     padding: 10px;
+  }
+  .profile{
+    width: 170px;
+    position: relative;
+  }
+  .profile-img{
+    width: 30px;
+    height: 30px;
+    border-radius:50%; 
+  }
+  .profile-list{
+    position: absolute;
+    z-index: 999;
+    margin-top:5px;
+    display: none;
+    right: -20px;
+  }
+  .profile-list li{
+    margin-bottom: 0 !important;
+    background-color: #191919 !important;
+    font-size: 14px !important;
+    font-family: 'Hind Guntur',sans-serif !important; 
   }
   .navbar-categories {
     justify-content: space-around;
@@ -270,11 +292,11 @@ header{
 h4>span{
   color:#21E1FF;
 }
-ul.film-button {
+ul.list-container {
   list-style: none;
   padding: 0;
 }
-.film-button >li {
+.list-container >li {
   width: 170px;
   height: 25px;
   line-height: 25px;
@@ -284,7 +306,7 @@ ul.film-button {
   font-family: 'Source Sans Pro',sans serif;
   font-size: 15px;
 }
-.film-button  i{
+.list-container  i{
   font-size: 10px;
 }
 .crew-poster {
@@ -343,26 +365,86 @@ ul.film-button {
 .modal{
   max-width: 100% !important;
 }
-/* Mobil */
-@media screen and (max-width:425px){
+
+/* Tablet ve Header */
+@media screen and (max-width:700px){
 
   header{
     display: none;
+  }
+  .mobile{
+    display:block;
   }
   .mobile-header{
     background-color: #484848;
     display: flex;
     padding: 15px 10px;
   }
-  .mobile-search{
+  .mobile-search-icon{
     margin-left:auto;
     margin-right: 15px;
   }
   .site-logo{
     font-size:20px;
   }
-  .film-box{
+  .header-container{
     width: 100%;
+    height: 100vh;
+    background-color: #484848;
+    padding-top: 10px;
+    display: none;
+  }
+  .sign-group{
+    text-align: center;
+    margin:10px 0px;
+  }
+
+  #mobile-kind-container{
+    height: auto;
+    margin:15px 0px;
+  }
+
+  #kind-container{
+    display: none;
+  }
+
+  .kind-link{
+    margin:5px 15px;
+  }
+  .navbar-categories{
+    flex-direction: column;
+  }
+
+  .search-input{
+    line-height: 20px;
+    margin:0 10px;
+  }
+
+
+  /* Profile */
+
+  .profile{
+    width: auto;
+    text-align: center;
+  }
+
+  .profile-list{
+    position: relative;
+    right: 0;
+  }
+  .profile-list li{
+    margin: auto;
+    background-color: #484848 !important;
+  }
+
+}
+/* Mobil */
+@media screen and (max-width:425px){
+
+  
+  .film-box{
+    width: calc(50% - 10px);
+    margin-right: 10px;
     
   }
   .film-poster{
@@ -375,7 +457,7 @@ ul.film-button {
     margin-top: 15px;
     order:2;
   }
-  .wrapper > .film-button{
+  .wrapper > .list-container{
     margin:auto;
     margin-top: 15px;
     order:1;
@@ -391,38 +473,6 @@ ul.film-button {
     margin-right: 0;
   }
 
-  /* Header */
-
-
-  .header-container{
-    width: 100%;
-    height: 100vh;
-    background-color: #484848;
-    padding-top: 10px;
-    display: none;
-  }
-  .sign-group{
-    text-align: center;
-    margin:10px 0px;
-  }
-
-  .mobile-kind-container{
-    height: auto;
-    margin:15px 0px;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-evenly;
-    justify-content: space-around;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 20px;
-    background-color: #484848;
-  }
-
-  .kind-link{
-    margin:5px 15px;
-  }
-  .navbar-categories{
-    flex-direction: column;
-  }
+  
 
 }
